@@ -115,7 +115,7 @@
 
 
     /* ==========================================================================
-       Content
+       Content Colors
        ========================================================================== */
 
     --ds-heading: var(--ds-foreground);
@@ -141,27 +141,73 @@
        Typography
        ========================================================================== */
 
-    /*
-     * These are semantic font roles.
-     *
-     * A theme can override these with actual font families.
-     */
+      /*
+      * Base/default font family.
+      *
+      * This deliberately uses a system stack so the design system has a
+      * sensible fallback even when a theme does not provide fonts.
+      */
 
-    --ds-font-content: var(--ds-font-default);
-    --ds-font-heading: var(--ds-font-default);
-    --ds-font-brand: var(--ds-font-default);
+      --ds-font-default:
+         ui-sans-serif,
+         system-ui,
+         sans-serif;
 
-    /*
-     * Base/default font family.
-     *
-     * This deliberately uses a system stack so the design system has a
-     * sensible fallback even when a theme does not provide fonts.
-     */
+      /*
+      * These are semantic font roles.
+      *
+      * A theme can override these with actual font families.
+      */
 
-    --ds-font-default:
-        ui-sans-serif,
-        system-ui,
-        sans-serif;
+      --ds-font-content: var(--ds-font-default);
+      --ds-font-heading: var(--ds-font-default);
+      --ds-font-brand: var(--ds-font-default);
+
+
+      /* Typography - Scale Tokens */
+      --ds-text-xs: 0.75rem;     /* 12px */
+      --ds-text-sm: 0.875rem;    /* 14px */
+      --ds-text-base: 1rem;      /* 16px */
+      --ds-text-lg: 1.125rem;    /* 18px */
+      --ds-text-xl: 1.25rem;     /* 20px */
+      --ds-text-2xl: 1.5rem;     /* 24px */
+      --ds-text-3xl: 1.875rem;   /* 30px */
+      --ds-text-4xl: 2.25rem;    /* 36px */
+
+
+      /* Font Weights */
+      --ds-font-weight-normal: 400;
+      --ds-font-weight-medium: 500;
+      --ds-font-weight-semibold: 600;
+      --ds-font-weight-bold: 700;
+
+
+      /* Line Heights */
+      --ds-leading-tight: 1.2;
+      --ds-leading-snug: 1.375;
+      --ds-leading-normal: 1.5;
+      --ds-leading-relaxed: 1.625;
+      --ds-leading-loose: 2;
+
+
+      
+      /* Semantic Typography */
+      --ds-text-body: var(--ds-text-base);
+      --ds-text-small: var(--ds-text-sm);
+      --ds-text-display: clamp(2rem, 4vw, 3rem); /* Font Scaling */
+
+
+      --ds-text-h1: var(--ds-text-display); /* using --ds-text-display for fluid display size */ 
+      --ds-text-h2: var(--ds-text-3xl);
+      --ds-text-h3: var(--ds-text-2xl);
+      --ds-text-h4: var(--ds-text-xl);
+      --ds-text-h5: var(--ds-text-lg);
+      --ds-text-h6: var(--ds-text-base);
+
+
+      
+
+      
 
 
     /* ==========================================================================
@@ -169,4 +215,52 @@
        ========================================================================== */
 
     --ds-radius: 0.525rem;
+
 }
+
+   /* ==========================================================================
+      Typography - Base Element Styles
+      ========================================================================== */
+
+   body {
+      font-family: var(--ds-font-content);
+      font-size: var(--ds-text-body);
+      font-weight: var(--ds-font-weight-normal);
+      line-height: var(--ds-leading-normal);
+      color: var(--ds-body);
+   }
+
+   h1, h2, h3, h4, h5, h6 {
+      font-family: var(--ds-font-heading);
+      font-weight: var(--ds-font-weight-bold);
+      line-height: var(--ds-leading-tight);
+      color: var(--ds-heading);
+   }
+
+   
+   h1 { font-size: var(--ds-text-h1); }
+   h2 { font-size: var(--ds-text-h2); }
+   h3 { font-size: var(--ds-text-h3); }
+   h4 { font-size: var(--ds-text-h4); }
+   h5 { font-size: var(--ds-text-h5); }
+   h6 { font-size: var(--ds-text-h6); }
+
+
+   /* ==========================================================================
+      Typography - Utility Classes
+      ========================================================================== */
+
+   .text-small {
+      font-size: var(--ds-text-small);
+   }
+
+   .text-caption {
+      font-size: var(--ds-text-xs);
+      line-height: var(--ds-leading-normal);
+   }
+
+   .text-display {
+      font-size: var(--ds-text-display);
+      font-weight: var(--ds-font-weight-bold);
+      line-height: var(--ds-leading-tight);
+   }
