@@ -156,7 +156,7 @@
 
 
     /* ==========================================================================
-       Content
+       Content colors
        ========================================================================== */
 
     --color-heading: var(--ds-heading);
@@ -167,15 +167,26 @@
     --color-link-hover: var(--ds-link-hover);
 
 
-    /* ==========================================================================
-       Typography
-       ========================================================================== */
+        /* ==========================================================================
+        Typography
+        ========================================================================== */
 
-    --font-sans: var(--ds-font-content);
-    --font-serif: var(--ds-font-heading);
-    --font-brand: var(--ds-font-brand);
+        --font-sans: var(--ds-font-content);
+        --font-serif: var(--ds-font-heading);
+        --font-brand: var(--ds-font-brand);
 
+        --text-body: var(--ds-text-body);
+        --text-small: var(--ds-text-small);
 
+        --text-h1: var(--ds-text-h1);
+        --text-h2: var(--ds-text-h2);
+        --text-h3: var(--ds-text-h3);
+        --text-h4: var(--ds-text-h4);
+        --text-h5: var(--ds-text-h5);
+        --text-h6: var(--ds-text-h6);
+
+        --text-display: var(--ds-text-display);
+    
     /* ==========================================================================
        Radius
        ========================================================================== */
@@ -201,17 +212,20 @@
 }
 
 [data-form-size="compact"] .form-label {
-    @apply text-sm;
+    
+    font-size: var(--ds-text-small);
 }
 
 [data-form-size="compact"] .form-input,
 [data-form-size="compact"] .form-textarea,
 [data-form-size="compact"] .form-select {
-    @apply px-3 py-2 text-sm;
+    @apply px-3 py-2 ;
+    font-size: var(--ds-text-small);
 }
 
 [data-form-size="compact"] .form-message {
-    @apply text-sm;
+    
+    font-size: var(--ds-text-small);
 }
 
 
@@ -220,17 +234,19 @@
 }
 
 [data-form-size="default"] .form-label {
-    @apply text-sm;
+    
+    font-size: var(--ds-text-small);
 }
 
 [data-form-size="default"] .form-input,
 [data-form-size="default"] .form-textarea,
 [data-form-size="default"] .form-select {
     @apply px-4 py-3;
+    font-size: var(--ds-text-body);
 }
 
 [data-form-size="default"] .form-message {
-    @apply text-base;
+    font-size: var(--ds-text-small);
 }
 
 
@@ -239,17 +255,18 @@
 }
 
 [data-form-size="large"] .form-label {
-    @apply text-base;
+    font-size: var(--ds-text-body);
 }
 
 [data-form-size="large"] .form-input,
 [data-form-size="large"] .form-textarea,
 [data-form-size="large"] .form-select {
     @apply px-5 py-4;
+    font-size: var(--ds-text-body);
 }
 
 [data-form-size="large"] .form-message {
-    @apply text-base;
+    font-size: var(--ds-text-body);
 }
 
 
