@@ -198,6 +198,18 @@
     --radius-xl: calc(var(--ds-radius) + 8px);
     --radius-2xl: calc(var(--ds-radius) + 16px);
     --radius-3xl: calc(var(--ds-radius) + 24px);
+
+
+    /* ==========================================================================
+    Footer
+    ========================================================================== */
+
+    --color-footer: var(--ds-footer-background);
+    --color-footer-foreground: var(--ds-footer-foreground);
+    --color-footer-heading: var(--ds-footer-heading);
+    --color-footer-link: var(--ds-footer-link);
+    --color-footer-link-hover: var(--ds-footer-link-hover);
+    --color-footer-muted: var(--ds-footer-muted);
 }
 
 
