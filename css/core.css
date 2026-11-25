@@ -244,32 +244,37 @@
 
 }
 
-   /* ==========================================================================
-      Typography - Base Element Styles
-      ========================================================================== */
 
-   body {
-      font-family: var(--ds-font-content);
-      font-size: var(--ds-text-body);
-      font-weight: var(--ds-font-weight-normal);
-      line-height: var(--ds-leading-normal);
-      color: var(--ds-body);
-   }
 
-   h1, h2, h3, h4, h5, h6 {
-      font-family: var(--ds-font-heading);
-      font-weight: var(--ds-font-weight-bold);
-      line-height: var(--ds-leading-tight);
-      color: var(--ds-heading);
-   }
+/* ==========================================================================
+   Typography - Base Element Styles
+   ========================================================================== */
 
-   
-   h1 { font-size: var(--ds-text-h1); }
-   h2 { font-size: var(--ds-text-h2); }
-   h3 { font-size: var(--ds-text-h3); }
-   h4 { font-size: var(--ds-text-h4); }
-   h5 { font-size: var(--ds-text-h5); }
-   h6 { font-size: var(--ds-text-h6); }
+@layer base {
+
+    body {
+        font-family: var(--ds-font-content);
+        font-size: var(--ds-text-body);
+        font-weight: var(--ds-font-weight-normal);
+        line-height: var(--ds-leading-normal);
+        color: var(--ds-body);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: var(--ds-font-heading);
+        font-weight: var(--ds-font-weight-bold);
+        line-height: var(--ds-leading-tight);
+        color: var(--ds-heading);
+    }
+
+    h1 { font-size: var(--ds-text-h1); }
+    h2 { font-size: var(--ds-text-h2); }
+    h3 { font-size: var(--ds-text-h3); }
+    h4 { font-size: var(--ds-text-h4); }
+    h5 { font-size: var(--ds-text-h5); }
+    h6 { font-size: var(--ds-text-h6); }
+
+}
 
 
    /* ==========================================================================
